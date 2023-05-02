@@ -26,6 +26,10 @@ struct AstronautDetailsView: View {
                 })
             
             List {
+                Text("Flights")
+                    .font(.title3)
+                    .fontWeight(.heavy)
+                
                 ForEach(astronautDetails.flightsArray, id: \.self) {
                     flight in
                     Text(flight.name)
