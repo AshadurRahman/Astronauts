@@ -20,7 +20,7 @@ struct AstronautDetailsView: View {
                         .cornerRadius(30)
                         .shadow(radius: 5)
                 }, placeholder: {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "photo.fill")
                         .foregroundColor(.gray)
                         .frame(width: 350.0, height: 350.0)
                 })
