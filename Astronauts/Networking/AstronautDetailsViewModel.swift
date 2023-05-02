@@ -3,15 +3,6 @@ import Foundation
 
 @MainActor
 class AstronautDetailsViewModel: ObservableObject {
-    struct AstronautDetails: Codable {
-        var name: String
-        var profile_image: String
-        var flights: [Flights]
-    }
-    
-    struct Flights: Hashable, Codable {
-        var name: String
-    }
     
     private var urlString = "https://ll.thespacedevs.com/2.2.0/astronaut/"
     @Published var name = ""
