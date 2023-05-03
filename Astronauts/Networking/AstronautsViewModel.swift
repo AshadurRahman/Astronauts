@@ -4,13 +4,10 @@ import Foundation
 @MainActor
 class AstronautsViewModel: ObservableObject {
     struct Astronauts: Codable {
-        var count: Int
-        var next: String
         var results: [AstronautsList]
     }
     
-    @Published var urlString = "https://ll.thespacedevs.com/2.2.0/astronaut/"
-    @Published var count = 0
+    private var urlString = "https://ll.thespacedevs.com/2.2.0/astronaut/"
     @Published var astronautsArray: [AstronautsList] = []
     
     func getAstronauts() async {
@@ -28,8 +25,6 @@ class AstronautsViewModel: ObservableObject {
                 return
             }
 
-            self.count = astronauts.count
-            self.urlString = astronauts.next
             self.astronautsArray = astronauts.results
             
         } catch {
