@@ -25,7 +25,7 @@ struct AstronautDetailsView: View {
                         .frame(width: 350.0, height: 350.0)
                 })
             
-            List {
+            Group {
                 Text("Flights")
                     .font(.title3)
                     .fontWeight(.heavy)
@@ -35,7 +35,9 @@ struct AstronautDetailsView: View {
                     Text(flight.name)
                         .font(.body)
                 }
+                .padding(1)
             }
+            .padding(.top)
             
             Spacer()
         }
