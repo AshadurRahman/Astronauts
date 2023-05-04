@@ -10,8 +10,8 @@ class AstronautDetailsViewModel: ObservableObject {
     @Published var flightsArray: [Flights] = []
     
     func getAstronautDetails(id: Int) async {
-        print("We are accessing the data from \(urlString)")
         urlString = urlString + String("\(id)")
+        print("We are accessing the data from \(urlString)")
         
         guard let url = URL(string: urlString) else {
             print("Error: could not create an URL from \(urlString)")
