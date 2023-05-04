@@ -1,7 +1,11 @@
 
 import Foundation
 
-struct AstronautsList: Codable {
+struct Astronauts: Decodable {
+    var results: [AstronautsList]
+}
+
+struct AstronautsList: Decodable {
     var id: Int
     var name: String
     var age: Int
