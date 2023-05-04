@@ -3,9 +3,6 @@ import Foundation
 
 @MainActor
 class AstronautsViewModel: ObservableObject {
-    struct Astronauts: Codable {
-        var results: [AstronautsList]
-    }
     
     private var urlString = "https://ll.thespacedevs.com/2.2.0/astronaut/"
     @Published var astronautsArray: [AstronautsList] = []
