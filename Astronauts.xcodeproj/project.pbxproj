@@ -16,7 +16,6 @@
 		E52B61E729F94B36002B120A /* Astronauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61E629F94B36002B120A /* Astronauts.swift */; };
 		E52B61E929F94C3D002B120A /* AstronautDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */; };
 		E52B61EB29F970A8002B120A /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */; };
-		E57AFE412A0A819300D0E97E /* newContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AFE402A0A819300D0E97E /* newContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		E52B61E629F94B36002B120A /* Astronauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronauts.swift; sourceTree = "<group>"; };
 		E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsView.swift; sourceTree = "<group>"; };
 		E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModel.swift; sourceTree = "<group>"; };
-		E57AFE402A0A819300D0E97E /* newContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 			children = (
 				E52B61E229F7DCC0002B120A /* AstronautsView.swift */,
 				E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */,
-				E57AFE402A0A819300D0E97E /* newContent.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,7 +176,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E57AFE412A0A819300D0E97E /* newContent.swift in Sources */,
 				E52B61E529F7EBDB002B120A /* AstronautsViewModel.swift in Sources */,
 				E52B61CE29F744D2002B120A /* AstronautsApp.swift in Sources */,
 				E52B61E929F94C3D002B120A /* AstronautDetailsView.swift in Sources */,
