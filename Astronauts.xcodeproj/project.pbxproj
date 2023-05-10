@@ -16,6 +16,8 @@
 		E52B61E729F94B36002B120A /* Astronauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61E629F94B36002B120A /* Astronauts.swift */; };
 		E52B61E929F94C3D002B120A /* AstronautDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */; };
 		E52B61EB29F970A8002B120A /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */; };
+		E57AFE442A0BEABC00D0E97E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E57AFE432A0BEABC00D0E97E /* FacebookLogin */; };
+		E57AFE462A0BEABC00D0E97E /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = E57AFE452A0BEABC00D0E97E /* FacebookShare */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57AFE462A0BEABC00D0E97E /* FacebookShare in Frameworks */,
+				E57AFE442A0BEABC00D0E97E /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +126,10 @@
 			dependencies = (
 			);
 			name = Astronauts;
+			packageProductDependencies = (
+				E57AFE432A0BEABC00D0E97E /* FacebookLogin */,
+				E57AFE452A0BEABC00D0E97E /* FacebookShare */,
+			);
 			productName = Astronauts;
 			productReference = E52B61CA29F744D2002B120A /* Astronauts.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +158,9 @@
 				Base,
 			);
 			mainGroup = E52B61C129F744D2002B120A;
+			packageReferences = (
+				E57AFE422A0BEABC00D0E97E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = E52B61CB29F744D2002B120A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,6 +392,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E57AFE422A0BEABC00D0E97E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E57AFE432A0BEABC00D0E97E /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E57AFE422A0BEABC00D0E97E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		E57AFE452A0BEABC00D0E97E /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E57AFE422A0BEABC00D0E97E /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E52B61C229F744D2002B120A /* Project object */;
 }
