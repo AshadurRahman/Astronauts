@@ -18,6 +18,9 @@
 		E52B61EB29F970A8002B120A /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */; };
 		E57AFE442A0BEABC00D0E97E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E57AFE432A0BEABC00D0E97E /* FacebookLogin */; };
 		E57AFE462A0BEABC00D0E97E /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = E57AFE452A0BEABC00D0E97E /* FacebookShare */; };
+		E57AFE482A0BF0F200D0E97E /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AFE472A0BF0F200D0E97E /* SocialLoginView.swift */; };
+		E57AFE4D2A0C45FB00D0E97E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AFE4C2A0C45FB00D0E97E /* AppDelegate.swift */; };
+		E57AFE4F2A0C591400D0E97E /* SocialLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AFE4E2A0C591400D0E97E /* SocialLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,11 @@
 		E52B61E629F94B36002B120A /* Astronauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronauts.swift; sourceTree = "<group>"; };
 		E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsView.swift; sourceTree = "<group>"; };
 		E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModel.swift; sourceTree = "<group>"; };
+		E57AFE472A0BF0F200D0E97E /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
+		E57AFE492A0BFA7400D0E97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E57AFE4A2A0C3EC400D0E97E /* Astronauts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astronauts.entitlements; sourceTree = "<group>"; };
+		E57AFE4C2A0C45FB00D0E97E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E57AFE4E2A0C591400D0E97E /* SocialLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,9 @@
 				E52B61E129F7D980002B120A /* Networking */,
 				E52B61E029F7D963002B120A /* Views */,
 				E52B61DB29F7450C002B120A /* Models */,
+				E57AFE4B2A0C45C700D0E97E /* Miscellaneous */,
+				E57AFE492A0BFA7400D0E97E /* Info.plist */,
+				E57AFE4A2A0C3EC400D0E97E /* Astronauts.entitlements */,
 				E52B61D129F744D3002B120A /* Assets.xcassets */,
 				E52B61D329F744D3002B120A /* Preview Content */,
 			);
@@ -97,6 +108,7 @@
 			children = (
 				E52B61E229F7DCC0002B120A /* AstronautsView.swift */,
 				E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */,
+				E57AFE472A0BF0F200D0E97E /* SocialLoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,8 +118,17 @@
 			children = (
 				E52B61E429F7EBDB002B120A /* AstronautsViewModel.swift */,
 				E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */,
+				E57AFE4E2A0C591400D0E97E /* SocialLogin.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E57AFE4B2A0C45C700D0E97E /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				E57AFE4C2A0C45FB00D0E97E /* AppDelegate.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,11 +210,14 @@
 			files = (
 				E52B61E529F7EBDB002B120A /* AstronautsViewModel.swift in Sources */,
 				E52B61CE29F744D2002B120A /* AstronautsApp.swift in Sources */,
+				E57AFE4F2A0C591400D0E97E /* SocialLogin.swift in Sources */,
 				E52B61E929F94C3D002B120A /* AstronautDetailsView.swift in Sources */,
+				E57AFE4D2A0C45FB00D0E97E /* AppDelegate.swift in Sources */,
 				E52B61EB29F970A8002B120A /* AstronautDetailsViewModel.swift in Sources */,
 				E51284642A0A7ED5001E4658 /* AstronautsDetails.swift in Sources */,
 				E52B61E329F7DCC0002B120A /* AstronautsView.swift in Sources */,
 				E52B61E729F94B36002B120A /* Astronauts.swift in Sources */,
+				E57AFE482A0BF0F200D0E97E /* SocialLoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,11 +343,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Astronauts/Astronauts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Astronauts/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Astronauts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,11 +373,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Astronauts/Astronauts.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Astronauts/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Astronauts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

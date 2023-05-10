@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDocumentTypes</key>
+    <array>
+    <dict/>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>fb196893646517174</string>
+        </array>
+    </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>196893646517174</string>
+    <key>FacebookClientToken</key>
+    <string>d07920a73f9a61c9dc0523cd03218177</string>
+    <key>FacebookDisplayName</key>
+    <string>Astronauts App</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+    </array>
+</dict>
+</plist>
