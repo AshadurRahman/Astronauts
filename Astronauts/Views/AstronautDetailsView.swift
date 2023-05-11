@@ -6,11 +6,12 @@ struct AstronautDetailsView: View {
     var astronauts: AstronautsList
     
     var body: some View {
-        VStack {
-            
+        ZStack {
+            VStack {
                 Text(astronautDetails.name)
                     .font(.title3)
                     .fontWeight(.heavy)
+            
                 AsyncImage(url: URL(string: astronautDetails.profile_image), content: {
                     image in
                     image
@@ -24,22 +25,30 @@ struct AstronautDetailsView: View {
                         .foregroundColor(.gray)
                         .frame(width: 350.0, height: 350.0)
                 })
-            
-            Group {
-                Text("Flights")
-                    .font(.title3)
-                    .fontWeight(.heavy)
                 
-                ForEach(astronautDetails.flightsArray, id: \.self) {
-                    flight in
-                    Text(flight.name)
-                        .font(.body)
+                Group {
+                    Text("Flights")
+                        .font(.title3)
+                        .fontWeight(.heavy)
+                    
+                    ForEach(astronautDetails.flightsArray, id: \.self) {
+                        flight in
+                        Text(flight.name)
+                            .font(.body)
+                    }
+                    .padding(1)
                 }
-                .padding(1)
+                .padding(.top)
+                
+                Spacer()
             }
-            .padding(.top)
+            if astronautDetails.isLoading {
+                ProgressView("Loading...")
+                    .tint(.blue)
+                    .scaleEffect(3)
+                    .font(.system(size:5))
+            }
             
-            Spacer()
         }
         .padding()
         .task {
