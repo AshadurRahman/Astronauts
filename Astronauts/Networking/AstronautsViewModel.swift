@@ -1,5 +1,6 @@
 
 import Foundation
+import CoreData
 
 @MainActor
 class AstronautsViewModel: ObservableObject {
@@ -8,7 +9,27 @@ class AstronautsViewModel: ObservableObject {
     @Published var astronautsArray: [AstronautsList] = []
     @Published var isLoading = false
     
-    func getAstronauts() async {
+    func saveData(context: NSManagedObjectContext) {
+        
+        astronautsArray.forEach { (data) in
+            
+            let entity = AstronautsDataModel(context: context)
+            entity.id = Int64(data.id)
+            entity.name = data.name
+            entity.age = Int64(data.age)
+            entity.profile_image_thumbnail = data.profile_image_thumbnail
+        }
+        
+        do {
+            try context.save()
+            print("Success")
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func getAstronauts(context: NSManagedObjectContext) async {
         print("We are accessing the data from main \(urlString)")
         isLoading = true
         
@@ -27,6 +48,7 @@ class AstronautsViewModel: ObservableObject {
             }
 
             self.astronautsArray = astronauts.results
+            self.saveData(context: context)
             isLoading = false
             
         } catch {
