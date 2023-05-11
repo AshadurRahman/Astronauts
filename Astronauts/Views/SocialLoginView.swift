@@ -7,19 +7,25 @@ struct SocialLoginView: View {
     
     var body: some View {
         ZStack() {
-            AnimatedBackground().edgesIgnoringSafeArea(.all)
-                        .blur(radius: 50)
-            Button(action: {
-                manager.loginWithUser()
-            }, label: {
-                Text("Continue with Facebook")
-                    .fontWeight(.bold)
-                    .padding(.vertical,10)
-                    .padding(.horizontal,30)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .clipShape(Capsule())
-            })
+            if !manager.logged {
+                AnimatedBackground().edgesIgnoringSafeArea(.all)
+                            .blur(radius: 50)
+                Button(action: {
+                    manager.loginWithUser()
+                }, label: {
+                    Text("Continue with Facebook")
+                        .fontWeight(.bold)
+                        .padding(.vertical,10)
+                        .padding(.horizontal,30)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                })
+            }
+            else {
+                AstronautsView()
+            }
+            
         }
     }
 }

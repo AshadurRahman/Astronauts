@@ -6,9 +6,10 @@ import SwiftUI
 class SocialLoginManager: ObservableObject {
     @AppStorage("logged") var logged = false
     @AppStorage("email") var email = ""
-    @State var manager = LoginManager()
+    var manager = LoginManager()
     
     func loginWithUser() {
+        print(" logged checking \(logged)")
         manager.logIn(permissions: ["public_profile", "email"], from: nil) {
             (result, error) in
             if error != nil{
@@ -25,12 +26,14 @@ class SocialLoginManager: ObservableObject {
                     guard let profileData = res as? [String : Any] else {return}
                     
                     self.email = profileData["email"] as! String
+                    print(profileData)
                 }
             }
         }
     }
     
     func logoutFromUser() {
+        print(" logged checking \(logged)")
         self.manager.logOut()
         self.email = ""
         self.logged = false
