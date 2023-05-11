@@ -48,6 +48,12 @@ struct AstronautsView: View {
                         await astronauts.getAstronauts()
                     }
                 }
+            if astronauts.isLoading {
+                ProgressView("Loading...")
+                    .tint(.blue)
+                    .scaleEffect(3)
+                    .font(.system(size:5))
+            }
             }
             
         }
