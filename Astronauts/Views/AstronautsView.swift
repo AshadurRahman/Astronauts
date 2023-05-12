@@ -18,28 +18,7 @@ struct AstronautsView: View {
             else {
                 if results.isEmpty {
                     NavigationView {
-                        List(astronauts.astronautsArray, id: \.id) {
-                            astronaut in
-                            NavigationLink(
-                                destination: AstronautDetailsView(astronauts: astronaut),
-                                label: {
-                                    HStack {
-                                        AsyncImage(url: URL(string: astronaut.profile_image_thumbnail))
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 80, height: 80)
-                                            .clipped()
-                                            .cornerRadius(40)
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text(astronaut.name)
-                                                .font(.title2)
-                                            Text("Age: \(astronaut.age)")
-                                                .font(.body)
-                                        }.padding(4)
-                                    }
-                                }
-                            )
-                        }
+                        AstronautListView(astronauts: astronauts.astronautsArray)
                         .navigationTitle("Astronauts")
                         .toolbar{
                             ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -57,28 +36,10 @@ struct AstronautsView: View {
                 else {
                     NavigationView {
                         
-                        List(results, id: \.id) {
-                            astronaut in
-//                            NavigationLink(
-////                                destination: AstronautDetailsView(astronaut),
-//                                label: {
-                                    HStack {
-                                        AsyncImage(url: URL(string: astronaut.profile_image_thumbnail ?? "No Data"))
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 80, height: 80)
-                                            .clipped()
-                                            .cornerRadius(40)
-                                        
-                                        VStack(alignment: .leading) {
-                                            Text(astronaut.name ?? "No name")
-                                                .font(.title2)
-                                            Text("Age: \(astronaut.age)")
-                                                .font(.body)
-                                        }.padding(4)
-                                    }
-//                                }
-//                            )
+                        let astronauts = results.map{astronaut in
+                            AstronautsList(id: Int(astronaut.id), name: astronaut.name ?? "", age: Int(astronaut.age), profile_image_thumbnail: astronaut.profile_image_thumbnail ?? "")
                         }
+                        AstronautListView(astronauts: astronauts)
                         .navigationTitle("Astronauts")
                         .toolbar{
                             ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -102,9 +63,40 @@ struct AstronautsView: View {
         }
     }
     
+    
     struct AstronautsView_Previews: PreviewProvider {
         static var previews: some View {
             AstronautsView()
         }
     }
 }
+
+struct AstronautListView: View {
+    let astronauts: [AstronautsList]
+    var body: some View {
+            
+            List(astronauts, id: \.id) {
+                astronaut in
+                NavigationLink(
+                    destination: AstronautDetailsView(astronauts: astronaut),
+                    label: {
+                        HStack {
+                            AsyncImage(url: URL(string: astronaut.profile_image_thumbnail ))
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 80, height: 80)
+                                .clipped()
+                                .cornerRadius(40)
+                            
+                            VStack(alignment: .leading) {
+                                Text(astronaut.name )
+                                    .font(.title2)
+                                Text("Age: \(astronaut.age)")
+                                    .font(.body)
+                            }.padding(4)
+                        }
+                    }
+                )
+            }
+            
+        }
+    }
