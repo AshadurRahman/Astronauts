@@ -16,6 +16,8 @@
 		E52B61E729F94B36002B120A /* Astronauts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61E629F94B36002B120A /* Astronauts.swift */; };
 		E52B61E929F94C3D002B120A /* AstronautDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */; };
 		E52B61EB29F970A8002B120A /* AstronautDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */; };
+		E5356E1E2A0D32B100D13927 /* AstronautsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5356E1C2A0D32B100D13927 /* AstronautsModel.xcdatamodeld */; };
+		E5356E3F2A0D39A600D13927 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5356E3E2A0D39A600D13927 /* Persistence.swift */; };
 		E57AFE442A0BEABC00D0E97E /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E57AFE432A0BEABC00D0E97E /* FacebookLogin */; };
 		E57AFE462A0BEABC00D0E97E /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = E57AFE452A0BEABC00D0E97E /* FacebookShare */; };
 		E57AFE482A0BF0F200D0E97E /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57AFE472A0BF0F200D0E97E /* SocialLoginView.swift */; };
@@ -34,6 +36,8 @@
 		E52B61E629F94B36002B120A /* Astronauts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronauts.swift; sourceTree = "<group>"; };
 		E52B61E829F94C3D002B120A /* AstronautDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsView.swift; sourceTree = "<group>"; };
 		E52B61EA29F970A8002B120A /* AstronautDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautDetailsViewModel.swift; sourceTree = "<group>"; };
+		E5356E1D2A0D32B100D13927 /* AstronautsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AstronautsModel.xcdatamodel; sourceTree = "<group>"; };
+		E5356E3E2A0D39A600D13927 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E57AFE472A0BF0F200D0E97E /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
 		E57AFE492A0BFA7400D0E97E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E57AFE4A2A0C3EC400D0E97E /* Astronauts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Astronauts.entitlements; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				E57AFE4A2A0C3EC400D0E97E /* Astronauts.entitlements */,
 				E52B61D129F744D3002B120A /* Assets.xcassets */,
 				E52B61D329F744D3002B120A /* Preview Content */,
+				E5356E1C2A0D32B100D13927 /* AstronautsModel.xcdatamodeld */,
+				E5356E3E2A0D39A600D13927 /* Persistence.swift */,
 			);
 			path = Astronauts;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5356E1E2A0D32B100D13927 /* AstronautsModel.xcdatamodeld in Sources */,
 				E52B61E529F7EBDB002B120A /* AstronautsViewModel.swift in Sources */,
 				E52B61CE29F744D2002B120A /* AstronautsApp.swift in Sources */,
 				E57AFE4F2A0C591400D0E97E /* SocialLogin.swift in Sources */,
@@ -216,6 +223,7 @@
 				E52B61EB29F970A8002B120A /* AstronautDetailsViewModel.swift in Sources */,
 				E51284642A0A7ED5001E4658 /* AstronautsDetails.swift in Sources */,
 				E52B61E329F7DCC0002B120A /* AstronautsView.swift in Sources */,
+				E5356E3F2A0D39A600D13927 /* Persistence.swift in Sources */,
 				E52B61E729F94B36002B120A /* Astronauts.swift in Sources */,
 				E57AFE482A0BF0F200D0E97E /* SocialLoginView.swift in Sources */,
 			);
@@ -446,6 +454,19 @@
 			productName = FacebookShare;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		E5356E1C2A0D32B100D13927 /* AstronautsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E5356E1D2A0D32B100D13927 /* AstronautsModel.xcdatamodel */,
+			);
+			currentVersion = E5356E1D2A0D32B100D13927 /* AstronautsModel.xcdatamodel */;
+			path = AstronautsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E52B61C229F744D2002B120A /* Project object */;
 }
